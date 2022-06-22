@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
     height: "35px",
     width: "35px",
     borderRadius: "100%",
-    border: "1px solid gray",
+    border: "1px solid rgb(237, 238, 242)",
     background: "white",
   },
   selected: { background: "#674de6", color: "white", borderColor: "#674de" },
@@ -18,7 +18,7 @@ const useStyles = createUseStyles({
     left: 30,
     zIndex: -1,
     height: "2px",
-    background: "gray",
+    background: "rgb(237, 238, 242)",
     "@media (max-width: 960px)": {
       width: "200%",
     },

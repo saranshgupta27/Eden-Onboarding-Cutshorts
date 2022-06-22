@@ -23,7 +23,7 @@ const useStyles = createUseStyles({
   },
   formContainer: {
     width: "100%",
-    maxWidth: "400px",
+    maxWidth: "360px",
   },
 });
 
@@ -31,7 +31,7 @@ function Step4({ onSubmit }: { onSubmit: () => void }) {
   const classes = useStyles();
 
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="flex flex-col items-center mt-7 md:mt-10">
       <div
         className={clsx(
           "flex items-center justify-center mb-6",
@@ -40,8 +40,13 @@ function Step4({ onSubmit }: { onSubmit: () => void }) {
       >
         &#10003;
       </div>
-      <h1 className="text-3xl font-bold">Congratulations, Eren!</h1>
-      <h2 className={clsx(classes.subheading, "text-1xl font-bold mt-2 mb-4")}>
+      <h1 className="text-3xl font-bold text-center">Congratulations, Eren!</h1>
+      <h2
+        className={clsx(
+          classes.subheading,
+          "text-1xl font-bold mt-2 mb-4 text-center"
+        )}
+      >
         You have completed onboarding, you can start using the Eden!
       </h2>
 

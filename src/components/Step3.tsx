@@ -14,9 +14,13 @@ const useStyles = createUseStyles({
   card: {
     padding: "16px",
     border: "1px solid #edeef2",
-    maxWidth: "180px",
+    width: "180px",
     textAlign: "left",
     borderRadius: "8px",
+    "@media (max-width: 960px)": {
+      width: "auto",
+      maxWidth: "100%",
+    },
   },
   icon: { height: "30px" },
   selectedCard: {
@@ -31,22 +35,22 @@ const useStyles = createUseStyles({
   },
   formContainer: {
     width: "100%",
-    maxWidth: "400px",
+    maxWidth: "360px",
   },
 });
 
 const cardsData = [
   {
     id: 1,
-    image: "/human.svg",
-    imageSelected: "/humanSelected.svg",
+    image: "/assets/human.svg",
+    imageSelected: "/assets/humanSelected.svg",
     heading: "For myself",
     subtext: "Write better.Think more clearly. Stay organized.",
   },
   {
     id: 2,
-    image: "/humans.svg",
-    imageSelected: "/humansSelected.svg",
+    image: "/assets/humans.svg",
+    imageSelected: "/assets/humansSelected.svg",
     heading: "With my team",
     subtext: "Wikis, docs,tasks & projects, all in one place",
   },
@@ -56,14 +60,21 @@ function Step3({ onSubmit }: { onSubmit: () => void }) {
   const classes = useStyles();
   const [selectedCard, setSelectedCard] = useState<null | number>(null);
   return (
-    <div className="flex flex-col items-center mt-10">
-      <h1 className="text-3xl font-bold">How are you planning to use Eden?</h1>
-      <h2 className={clsx(classes.subheading, "text-1xl font-bold mt-2 mb-4")}>
+    <div className="flex flex-col items-center mt-7 md:mt-10">
+      <h1 className="text-3xl font-bold text-center">
+        How are you planning to use Eden?
+      </h1>
+      <h2
+        className={clsx(
+          classes.subheading,
+          "text-1xl font-bold mt-2 mb-4 text-center"
+        )}
+      >
         We'll streamline your setup experience accordingly.
       </h2>
 
       <div className={clsx(classes.formContainer, "flex flex-col gap-0.5")}>
-        <div className="flex gap-4 mb-4">
+        <div className="flex flex-col gap-2 justify-between md-justify-start mb-4 md:flex-row">
           {cardsData.map((item) => (
             <button
               key={item.id}

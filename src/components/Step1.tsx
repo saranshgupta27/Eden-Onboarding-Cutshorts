@@ -26,7 +26,7 @@ const useStyles = createUseStyles((theme) => ({
   },
   formContainer: {
     width: "100%",
-    maxWidth: "400px",
+    maxWidth: "360px",
   },
 }));
 
@@ -34,9 +34,16 @@ function Step1({ onSubmit }: { onSubmit: () => void }) {
   const classes = useStyles();
 
   return (
-    <div className="flex flex-col items-center mt-10">
-      <h1 className="text-3xl font-bold">Welcome! First things first...</h1>
-      <h2 className={clsx(classes.subheading, "text-1xl font-bold mt-2 mb-4")}>
+    <div className="flex flex-col items-center mt-7 md:mt-10">
+      <h1 className="text-3xl font-bold text-center">
+        Welcome! First things first...
+      </h1>
+      <h2
+        className={clsx(
+          classes.subheading,
+          "text-1xl font-bold mt-2 mb-4 text-center"
+        )}
+      >
         You can always change them later.
       </h2>
 

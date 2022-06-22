@@ -19,6 +19,9 @@ const useStyles = createUseStyles({
     zIndex: -1,
     height: "2px",
     background: "gray",
+    "@media (max-width: 960px)": {
+      width: "200%",
+    },
   },
   line2: {
     display: "none",
@@ -63,7 +66,7 @@ function Stepper({
   }, [currentStep, stepsCount]);
 
   return (
-    <div className="flex gap-10 items-center mt-8">
+    <div className="flex gap-7 md:gap-10 items-center mt-8">
       {stepsData.map((item) => (
         <button
           key={item.value}

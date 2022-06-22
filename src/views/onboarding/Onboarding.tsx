@@ -12,8 +12,10 @@ const useStyles = createUseStyles((theme) => ({
     height: "42px",
   },
   container: {
-    marginTop: "100px",
-    padding: "0 200px",
+    padding: "100px 200px",
+    "@media (max-width: 960px)": {
+      padding: "50px 20px",
+    },
   },
 }));
 
@@ -39,7 +41,7 @@ function Onboarding() {
   return (
     <div className={clsx("flex flex-col items-center", classes.container)}>
       <div className={"flex items-end gap-1"}>
-        <img src="/logo.svg" alt="logo" className={classes.logo} />
+        <img src="/assets/logo.svg" alt="logo" className={classes.logo} />
         <p className="text-3xl font-semibold">Eden</p>
       </div>
       <Stepper

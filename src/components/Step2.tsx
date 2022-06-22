@@ -27,7 +27,7 @@ const useStyles = createUseStyles({
   },
   formContainer: {
     width: "100%",
-    maxWidth: "400px",
+    maxWidth: "360px",
   },
 });
 
@@ -35,11 +35,16 @@ function Step2({ onSubmit }: { onSubmit: () => void }) {
   const classes = useStyles();
 
   return (
-    <div className="flex flex-col items-center mt-10">
-      <h1 className="text-3xl font-bold">
+    <div className="flex flex-col items-center mt-7 md:mt-10">
+      <h1 className="text-3xl font-bold text-center">
         Let's set up a home for all your work
       </h1>
-      <h2 className={clsx(classes.subheading, "text-1xl font-bold mt-2 mb-4")}>
+      <h2
+        className={clsx(
+          classes.subheading,
+          "text-1xl font-bold mt-2 mb-4 text-center"
+        )}
+      >
         You can always create another workspace later
       </h2>
 

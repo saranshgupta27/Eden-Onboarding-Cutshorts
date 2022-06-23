@@ -4,12 +4,12 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   subheading: {
-    color: "gray",
+    color: "var(--secondary)",
   },
   label: {
-    color: "#3b414d",
-    fontSize: "14px",
-    fontWeight: "600",
+    color: "var(--secondary)",
+    fontSize: "16px",
+    fontWeight: "500",
   },
   card: {
     padding: "16px",
@@ -17,6 +17,9 @@ const useStyles = createUseStyles({
     width: "180px",
     textAlign: "left",
     borderRadius: "8px",
+    "&:hover": {
+      borderColor: "var(--primary)",
+    },
     "@media (max-width: 960px)": {
       width: "auto",
       maxWidth: "100%",
@@ -24,10 +27,10 @@ const useStyles = createUseStyles({
   },
   icon: { height: "30px" },
   selectedCard: {
-    borderColor: "#674de6",
+    borderColor: "var(--primary)",
   },
   button: {
-    background: "#674de6",
+    background: "var(--primary)",
     color: "white",
     padding: "16px 0",
     borderRadius: "4px",
@@ -65,10 +68,7 @@ function Step3({ onSubmit }: { onSubmit: () => void }) {
         How are you planning to use Eden?
       </h1>
       <h2
-        className={clsx(
-          classes.subheading,
-          "text-1xl font-bold mt-2 mb-4 text-center"
-        )}
+        className={clsx(classes.subheading, "text-1xl  mt-2 mb-4 text-center")}
       >
         We'll streamline your setup experience accordingly.
       </h2>

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #674de6;
+  --secondary: #6c7484;
+  --lightGray: #edeef2;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;

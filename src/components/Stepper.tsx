@@ -10,7 +10,11 @@ const useStyles = createUseStyles({
     border: "1px solid rgb(237, 238, 242)",
     background: "white",
   },
-  selected: { background: "#674de6", color: "white", borderColor: "#674de" },
+  selected: {
+    background: "var(--primary)",
+    color: "white",
+    borderColor: "#674de",
+  },
   line: {
     position: "absolute",
     width: "300%",
@@ -31,12 +35,12 @@ const useStyles = createUseStyles({
     left: 0,
     zIndex: -1,
     height: "2px",
-    background: "#674de6",
+    background: "var(--primary)",
   },
   showLine2: {
     display: "block",
   },
-  completedStep: { background: "#674de6" },
+  completedStep: { background: "var(--primary)" },
 });
 
 function Stepper({

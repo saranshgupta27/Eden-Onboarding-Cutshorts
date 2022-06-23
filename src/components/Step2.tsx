@@ -4,22 +4,22 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   subheading: {
-    color: "gray",
+    color: "var(--secondary)",
   },
   label: {
-    color: "#3b414d",
-    fontSize: "14px",
-    fontWeight: "600",
+    color: "var(--secondary)",
+    fontSize: "16px",
+    fontWeight: "500",
   },
   input: {
-    padding: "8px",
-    border: "1px solid #edeef2",
+    padding: "10px 16px",
+    border: "1px solid var(--lightGray)",
     borderRadius: "4px",
   },
-  filledInput: { background: "#f9fafc", width: "140px" },
+  filledInput: { background: "#EDF2F7", width: "160px" },
   optionalText: { color: "#626874", fontWeight: "300" },
   button: {
-    background: "#674de6",
+    background: "var(--primary)",
     color: "white",
     padding: "16px 0",
     borderRadius: "4px",
@@ -40,10 +40,7 @@ function Step2({ onSubmit }: { onSubmit: () => void }) {
         Let's set up a home for all your work
       </h1>
       <h2
-        className={clsx(
-          classes.subheading,
-          "text-1xl font-bold mt-2 mb-4 text-center"
-        )}
+        className={clsx(classes.subheading, "text-1xl  mt-2 mb-4 text-center")}
       >
         You can always create another workspace later
       </h2>

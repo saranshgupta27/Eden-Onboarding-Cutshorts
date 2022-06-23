@@ -4,21 +4,21 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles((theme) => ({
   subheading: {
-    color: "gray",
+    color: "var(--secondary)",
   },
   label: {
-    color: "#3b414d",
-    fontSize: "14px",
-    fontWeight: "600",
+    color: "var(--secondary)",
+    fontSize: "16px",
+    fontWeight: "500",
   },
   input: {
-    padding: "8px",
-    border: "1px solid #edeef2",
+    padding: "10px 16px",
+    border: "1px solid var(--lightGray)",
     borderRadius: "4px",
   },
 
   button: {
-    background: "#674de6",
+    background: "var(--primary)",
     color: "white",
     padding: "16px 0",
     borderRadius: "4px",
@@ -39,10 +39,7 @@ function Step1({ onSubmit }: { onSubmit: () => void }) {
         Welcome! First things first...
       </h1>
       <h2
-        className={clsx(
-          classes.subheading,
-          "text-1xl font-bold mt-2 mb-4 text-center"
-        )}
+        className={clsx(classes.subheading, "text-1xl  mt-2 mb-4 text-center")}
       >
         You can always change them later.
       </h2>

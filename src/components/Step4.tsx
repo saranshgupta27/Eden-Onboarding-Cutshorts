@@ -4,10 +4,10 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   subheading: {
-    color: "gray",
+    color: "var(--secondary)",
   },
   roundTick: {
-    background: "#674de6",
+    background: "var(--primary)",
     width: "60px",
     height: "60px",
     borderRadius: "100%",
@@ -15,7 +15,7 @@ const useStyles = createUseStyles({
     fontSize: "25px",
   },
   button: {
-    background: "#674de6",
+    background: "var(--primary)",
     color: "white",
     padding: "16px 0",
     borderRadius: "4px",
@@ -42,10 +42,7 @@ function Step4({ onSubmit }: { onSubmit: () => void }) {
       </div>
       <h1 className="text-3xl font-bold text-center">Congratulations, Eren!</h1>
       <h2
-        className={clsx(
-          classes.subheading,
-          "text-1xl font-bold mt-2 mb-4 text-center"
-        )}
+        className={clsx(classes.subheading, "text-1xl  mt-2 mb-4 text-center")}
       >
         You have completed onboarding, you can start using the Eden!
       </h2>

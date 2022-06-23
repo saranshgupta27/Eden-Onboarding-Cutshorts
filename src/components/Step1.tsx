@@ -44,7 +44,10 @@ function Step1({ onSubmit }: { onSubmit: () => void }) {
         You can always change them later.
       </h2>
 
-      <div className={clsx(classes.formContainer, "flex flex-col gap-0.5")}>
+      <form
+        className={clsx(classes.formContainer, "flex flex-col gap-0.5")}
+        onSubmit={onSubmit}
+      >
         <label className={classes.label} htmlFor="name">
           Full Name
         </label>
@@ -53,6 +56,7 @@ function Step1({ onSubmit }: { onSubmit: () => void }) {
           id="name"
           type="text"
           placeholder="Steve Jobs"
+          required
         />
         <label className={classes.label} htmlFor="d-name">
           Display Name
@@ -62,11 +66,12 @@ function Step1({ onSubmit }: { onSubmit: () => void }) {
           id="d-name"
           type="text"
           placeholder="Steve"
+          required
         />
-        <button className={classes.button} onClick={onSubmit}>
+        <button className={classes.button} type="submit">
           Create Workspace
         </button>
-      </div>
+      </form>
     </div>
   );
 }

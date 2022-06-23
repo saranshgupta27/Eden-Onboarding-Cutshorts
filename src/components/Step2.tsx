@@ -45,7 +45,10 @@ function Step2({ onSubmit }: { onSubmit: () => void }) {
         You can always create another workspace later
       </h2>
 
-      <div className={clsx(classes.formContainer, "flex flex-col gap-0.5")}>
+      <form
+        className={clsx(classes.formContainer, "flex flex-col gap-0.5")}
+        onSubmit={onSubmit}
+      >
         <label className={classes.label} htmlFor="w-name">
           Workspace Name
         </label>
@@ -54,6 +57,7 @@ function Step2({ onSubmit }: { onSubmit: () => void }) {
           id="w-name"
           type="text"
           placeholder="Eden"
+          required
         />
         <label className={classes.label} htmlFor="w-url">
           Workspace URL <span className={classes.optionalText}>(optional)</span>
@@ -69,13 +73,12 @@ function Step2({ onSubmit }: { onSubmit: () => void }) {
             className={clsx("mb-2", classes.input)}
             type="text"
             placeholder="Example"
+            required
           />
         </div>
 
-        <button className={classes.button} onClick={onSubmit}>
-          Create Workspace
-        </button>
-      </div>
+        <button className={classes.button}>Create Workspace</button>
+      </form>
     </div>
   );
 }
